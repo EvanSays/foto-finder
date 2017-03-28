@@ -55,10 +55,13 @@ label {
   float: right;
 }
 
+#save-btn:hover {
+  background-color: #938284;
+}
+
 .main-buttons {
   width: 480px;
   margin: auto;
-  text-align: center;
   margin-top: 47px;
 }
 
@@ -73,4 +76,44 @@ label {
 .input-wrapper {
   width: 480px;
   margin: auto;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.inputfile + label {
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #5B4447;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: #5B4447;
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 50px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #938284;
+}
+
+.inputfile + label {
+	cursor: pointer;
+}
+
+  .inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
 }
