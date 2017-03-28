@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/js" href="scripts.js">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <title>Foto Finder</title>
 </head>
@@ -35,11 +34,11 @@
 
             <div class="choose-file-wrapper">
                 <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                <label for="file">Choose File</label>
+                <label for="file"><span id="file-name">Choose File</span></label>
 
                 <label id="add-to-album-btn" for="">Add to Album</label>
             </div>
->>>>>>> bf6af3305dca039a23450054895f9d57bcd8077a
+
         </div>
     </main>
 
@@ -108,6 +107,7 @@
 
 
     </section>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
