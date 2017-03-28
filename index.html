@@ -1,39 +1,111 @@
+<!DOCTYPE html>
+<html>
 
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="reset.css">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/js" href="scripts.js">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
-      <title>Foto-Finder</title>
-    </head>
-    <body>
-      <header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/js" href="scripts.js">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <title>Foto Finder</title>
+</head>
+
+<body>
+    <header>
         <h1>FOTO
           <img class="header-cam-icon" src="photos/foto-finder-logo.svg" alt="Red camera icon">
           FINDER
         </h1>
-      </header>
-      <main>
-        <div class="input-wrapper">
-          <label for="title-gen">
-            Title
-          </label>
-          <input id="title-gen" type="text" name="" value="">
-          <label for="caption-gen">
-            Caption
-          </label>
-          <input id="caption-gen" type="text" name="" value="">
-        </div>
-        <div class="main-buttons">
-          <label id="choose-file-btn" for="">Choose File</label>
-          <label id="save-btn" for="">Save</label>
-        </div>
-      </main>
-      <section>
+    </header>
 
-      </section>
-    </body>
-  </html>
+    <main>
+        <div class="inputs-wrapper">
+
+            <label for="input-title">
+            Title
+            </label>
+            <input id="input-title" type="text" name="" value="">
+
+            <label for="input-caption">
+            Caption
+            </label>
+            <input id="input-caption" type="text" name="" value="">
+
+            <div class="choose-file-wrapper">
+                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <label for="file">Choose File</label>
+
+                <label id="add-to-album-btn" for="">Add to Album</label>
+            </div>
+        </div>
+    </main>
+
+
+
+    <section>
+        <section class="card-wrapper">
+            <h2 class="card-header">Title of PhotoTitle of PhotoTitle of PhotoTitle of Photo</h2>
+            <img class="card-img" src="photos/pirate.png" />
+            <p class="card-content">
+                Card content here.Card content here.Card content here.Card content here.Card content here.
+            </p>
+            <footer>
+                <img class="card-icon-delete" src="photos/delete.svg" alt="">
+                <img class="card-icon-fav" src="photos/favorite.svg" alt="">
+            </footer>
+        </section>
+
+        <section class="card-wrapper">
+            <h2 class="card-header">Title of PhotoTitle of PhotoTitle of PhotoTitle of Photo</h2>
+            <img class="card-img" src="photos/pirate.png" />
+            <p class="card-content">
+                Card content here.Card content here.Card content here.Card content here.Card content here.
+            </p>
+            <footer>
+                <img class="card-icon-delete" src="photos/delete.svg" alt="">
+                <img class="card-icon-fav" src="photos/favorite.svg" alt="">
+            </footer>
+        </section>
+
+        <section class="card-wrapper">
+            <h2 class="card-header">Title of PhotoTitle of PhotoTitle of PhotoTitle of Photo</h2>
+            <img class="card-img" src="photos/pirate.png" />
+            <p class="card-content">
+                Card content here.Card content here.Card content here.Card content here.Card content here.
+            </p>
+            <footer>
+                <img class="card-icon-delete" src="photos/delete.svg" alt="">
+                <img class="card-icon-fav" src="photos/favorite.svg" alt="">
+            </footer>
+        </section>
+
+        <section class="card-wrapper">
+            <h2 class="card-header">Title of PhotoTitle of PhotoTitle of PhotoTitle of Photo</h2>
+            <img class="card-img" src="photos/pirate.png" />
+            <p class="card-content">
+                Card content here.Card content here.Card content here.Card content here.Card content here.
+            </p>
+            <footer>
+                <img class="card-icon-delete" src="photos/delete.svg" alt="">
+                <img class="card-icon-fav" src="photos/favorite.svg" alt="">
+            </footer>
+        </section>
+
+        <section class="card-wrapper">
+            <h2 class="card-header">Title of PhotoTitle of PhotoTitle of PhotoTitle of Photo</h2>
+            <img class="card-img" src="photos/pirate.png" />
+            <p class="card-content">
+                Card content here.Card content here.Card content here.Card content here.Card content here.
+            </p>
+            <footer>
+                <img class="card-icon-delete" src="photos/delete.svg" alt="">
+                <img class="card-icon-fav" src="photos/favorite.svg" alt="">
+            </footer>
+        </section>
+
+
+    </section>
+</body>
+
+</html>
