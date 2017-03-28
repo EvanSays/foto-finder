@@ -9,6 +9,12 @@ header {
 
 main {
   background-color: #3E2A35;
+  height: 350px;
+}
+main:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h1 {
@@ -17,6 +23,7 @@ h1 {
   font-weight: 800;
   font-size: 58px;
   padding-top: 25px;
+  letter-spacing: 2px;
 }
 
 .header-cam-icon {
@@ -26,6 +33,8 @@ h1 {
 label {
   display: block;
   color: #C2B2B4;
+  padding-top: 26px;
+  font-weight: 200;
 }
 
 #choose-file-btn, #save-btn {
@@ -37,17 +46,28 @@ label {
   background-color: #5B4447;
   color: #FFFFFF;
   font-size: 17px;
+  line-height: 50px;
+}
+#choose-file-btn {
+  float: left;
+}
+#save-btn {
+  float: right;
 }
 
 .main-buttons {
   width: 480px;
   margin: auto;
   text-align: center;
+  margin-top: 47px;
 }
 
 #caption-gen, #title-gen {
-  width: 440px;
+  width: 100%;
   height: 50px;
+  margin-top: 10px;
+  border: 0px;
+  padding: 0px;
 }
 
 .input-wrapper {
