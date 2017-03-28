@@ -1,0 +1,56 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+
+}
+
+main {
+  background-color: #3E2A35;
+}
+
+h1 {
+  background-color: #3E2A35;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 58px;
+  padding-top: 25px;
+}
+
+.header-cam-icon {
+  height: 53px;
+}
+
+label {
+  display: block;
+  color: #C2B2B4;
+}
+
+#choose-file-btn, #save-btn {
+  width: 200px;
+  height: 50px;
+  border: 0px;
+  padding: 0px;
+  text-align: center;
+  background-color: #5B4447;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.main-buttons {
+  width: 480px;
+  margin: auto;
+  text-align: center;
+}
+
+#caption-gen, #title-gen {
+  width: 440px;
+  height: 50px;
+}
+
+.input-wrapper {
+  width: 480px;
+  margin: auto;
+}
