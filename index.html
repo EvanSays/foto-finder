@@ -28,29 +28,19 @@
             </label>
             <input id="input-caption" type="text" name="" value="">
             <div class="choose-add-btn-wrapper">
-                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <input type="file" name="file" id="file" class="inputfile"/>
                 <label for="file"><span id="file-name">Choose File</span></label>
-                <button id="add-to-album-btn" type="button" name="button">Add to Album</button>
+                <button id="add-to-album-btn" type="button" name="button" disabled>Add to Album</button>
             </div>
 
         </div>
     </main>
+
     <section id="photo-album">
-        <section class="card-wrapper">
-            <h2 class="card-header">Title of Photo</h2>
-            <img class="card-img" src="photos/waterfall.jpg" alt="Any image that a user can upload and favorite" />
-            <p class="card-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <footer class="card-footer">
-              <img class="card-icon-delete" class="card-icon-delete" src="photos/delete.svg" alt="inactive trashcan icon for delete">
-              <img class="card-icon-delete-active" src="photos/delete-active.svg" alt="active trashcan icon to delete" disabled>
-              <img class="card-icon-fav" src="photos/favorite.svg" alt="inactive heart icon for favorite">
-              <img class="card-icon-fav-active" src="photos/favorite-active.svg" alt="active heart icon to favorite" disabled>
-            </footer>
-        </section>
+        <h2>Choose your photo + give it a title and caption</h2>
     </section>
     <footer id="footer-creators">
-        <p id="footer-made-by">Made by Evan Miller and George Goering</p>
+        <p id="footer-made-by">Created by Evan Miller and George Goering</p>
     </footer>
     <script src="scripts.js"></script>
 </body>
