@@ -4,15 +4,18 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #3E2A35;
 }
+
 
 /*=======================================
 >>>>>>>>  Header  <<<<<<<<
 ========================================*/
+
 h1 {
   background-color: #3E2A35;
   color: #FFFFFF;
-  font-size: 56px;
+  font-size: 53px;
   font-weight: 800;
   letter-spacing: 2px;
   text-align: center;
@@ -23,9 +26,12 @@ h1 {
   height: 53px;
   vertical-align: top;
 }
+
+
 /*=======================================
 >>>>>>>>  Main  <<<<<<<<
 ========================================*/
+
 main {
   background: #3E2A35;
   height: 350px;
@@ -35,6 +41,7 @@ main {
   max-width: 480px;
   margin: auto;
   background: #3E2A35;
+  padding: 10px;
 }
 
 label {
@@ -48,19 +55,22 @@ label {
   margin-top: 12px;
   width: 100%;
   height: 45px;
-
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
+
 
 /*=======================================
 >>>>>>>>  buttons  <<<<<<<<
 ========================================*/
 
 .choose-add-btn-wrapper {
-  width: 480px;
+  /*width: 480px;*/
   text-align: center;
   margin-top: 39px;
 }
- #add-to-album-btn {
+
+#add-to-album-btn {
   background-color: #5B4447;
   color: #FFFFFF;
   font-size: 14px;
@@ -70,78 +80,81 @@ label {
   height: 42px;
   border: 0px;
   padding: 0px;
-
+  float: right;
 }
+
 #choose-file-btn {
   float: left;
 }
-#add-to-album-btn {
-  float: right;
+
+#add-to-album-btn:hover {
+  background-color: #C2B2B4;
+  cursor: pointer;
 }
 
 
 /*=======================================
 >>>>>>>>  Choose Button  <<<<<<<<
 ========================================*/
-.inputfile + label {
-	cursor: pointer; /* "hand" cursor */
+
+.inputfile+label {
+  cursor: pointer;
+  /* "hand" cursor */
 }
+
 .inputfile {
   width: 200px;
   height: 50px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-
-}
-.inputfile + label {
-    width: 210px;
-    height: 42px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #FFFFFF;
-    background-color: #5B4447;
-    display: inline-block;
-    line-height: 42px;
-    padding: 0px;
-    float: left;
-}
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: #938284;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
+.inputfile+label {
+  width: 210px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFFFFF;
+  background-color: #5B4447;
+  display: inline-block;
+  line-height: 42px;
+  padding: 0px;
+  float: left;
+}
 
-
+.inputfile:focus+label, .inputfile+label:hover {
+  background-color: #938284;
+}
 
 
 /*=======================================
 >>>>>>>>  Cards  <<<<<<<<
 ========================================*/
+
 section {
   text-align: center;
   background-color: #C2B2B4;
 }
 
 .card-wrapper {
-  /*background-color: #3E2A35;*/
-  text-align: center;
+  background-color: #5b4447;
   display: inline-block;
   width: 197px;
   margin: 17px;
-  border: 1px solid #3E2A35;
+  border: 1px solid #938284;
 }
 
-.card-header, .card-content  {
+.card-header, .card-content {
   background-color: #FFFFFF;
   color: #3E2A35;
-  padding: 10px 10px 20px 10px;
+  padding: 10px 10px 12px 10px;
   text-align: left;
+  margin-top: -2px;
 }
 
-footer {
-  background-color: #5B4447;
+.card-footer {
   height: 40px;
 }
 
@@ -152,13 +165,47 @@ footer {
 .card-icon-delete {
   float: left;
   width: 25px;
-  background-color: #3E2A35;
+  margin: 7px;
+}
+
+.card-icon-delete:hover {
+  opacity: 0.5;
+}
+
+.card-icon-delete-active {
+  float: left;
+  width: 25px;
   margin: 7px;
 }
 
 .card-icon-fav {
   float: right;
   width: 25px;
-  background-color: #3E2A35;
   margin: 7px;
+}
+
+.card-icon-fav:hover {
+  opacity: 0.5;
+}
+
+.card-icon-fav-active {
+  float: right;
+  width: 25px;
+  margin: 7px;
+}
+
+
+/*=======================================
+>>>>>>>>  Footer  <<<<<<<<
+========================================*/
+
+#footer-creaters {
+  height: 50px;
+}
+
+p {
+  font-size: 12px;
+  color: #938284;
+  float: right;
+  padding: 20px;
 }
