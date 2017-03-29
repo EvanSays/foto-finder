@@ -54,11 +54,42 @@ albumBtn.addEventListener('click', function()
 {
   var newPhotoCard = new AlbumCard();
   var newCardWrapper = document.createElement("ARTICLE");
-  newCardWrapper.className = "card-wrapper";
+  var fileName = document.getElementById( 'file-name' ).innerHTML;
+  newCardWrapper.setAttribute('class', "card-wrapper")
+  newCardWrapper.setAttribute('id', fileName);
   photoAlbum.appendChild(newCardWrapper);
+  var targetCard = document.getElementById(fileName);
   var newTitle = document.createElement("H2");
-  var newTitleText = document.createTextNode("newPhotoCard.title");
-  document.newCardWrapper.appendChild(newTitle);
-
-
+  newTitle.setAttribute('class', "card-header")
+  newCardWrapper.appendChild(newTitle);
+  var newTitleText = document.createTextNode(newPhotoCard.title);
+  newTitle.appendChild(newTitleText);
+  var newPhotoElement = document.createElement("IMG");
+  var newPhotoURL = "photos/"+fileName;
+  newPhotoElement.setAttribute("src", newPhotoURL);
+  newPhotoElement.setAttribute("class", "card-img");
+  newCardWrapper.appendChild(newPhotoElement);
+  var cardContent = document.createElement("P");
+  cardContent.setAttribute("class", "card-content");
+  newCardWrapper.appendChild(cardContent);
+  var newCaptionText = document.createTextNode(newPhotoCard.caption);
+  cardContent.appendChild(newCaptionText);
+  var newCardFooter = document.createElement("FOOTER");
+  newCardWrapper.appendChild(newCardFooter);
+  var trashIconStd = document.createElement("IMG")
+  var trashIconActv = document.createElement("IMG")
+  trashIconStd.setAttribute("src", "photos/delete.svg")
+  trashIconStd.setAttribute("class", "card-icon-delete")
+  trashIconActv.setAttribute("src", "photos/delete-active.svg")
+  trashIconActv.setAttribute("class", "card-icon-delete-active")
+  var favoriteIconStd = document.createElement("IMG")
+  var favoriteIconActv = document.createElement("IMG")
+  favoriteIconStd.setAttribute("src", "photos/favorite.svg")
+  favoriteIconStd.setAttribute("class", "card-icon-fav")
+  favoriteIconActv.setAttribute("class", "card-icon-fav-active")
+  favoriteIconActv.setAttribute("src", "photos/favorite-active.svg")
+  newCardFooter.appendChild(favoriteIconStd)
+  newCardFooter.appendChild(favoriteIconActv)
+  newCardFooter.appendChild(trashIconStd)
+  newCardFooter.appendChild(trashIconActv)
 })
