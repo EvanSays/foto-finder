@@ -1,17 +1,22 @@
-// var titleGen = getElementById('title-gen');
-// var captionGen = getElementById('caption-gen');
+var inputTitle = document.getElementById('input-title');
+var inputCaption = document.getElementById('input-caption');
 // var chooseFileBtn = getElementById('choose-file-btn');
-// var saveBtn = getElementById('choose-file-btn');
+var albumBtn = document.getElementById('add-to-album-btn');
 // var cardDelBtn = getElementsByClassName('card-del-btn')
 // var favIconBtn = getElementsByClassName('card-icon-fav')
 //
-// function AlbumCard {
-//   this.caption = caption;
-//   this.title = title;
-// }
+var photoAlbum = document.getElementById("photo-album");
+function AlbumCard(title, caption, img) {
+  this.caption = inputCaption.value;
+  console.log(this.caption)
+  this.title = inputTitle.value;
+  console.log(this.title)
+}
 //
-// AlbumCard.prototype.image = function() {
-// }
+AlbumCard.prototype.image = function() {
+  var newPhoto = "/photos/"+document.getElementById('file-name').innerHTML
+
+}
 //
 // AlbumCard.prototype.delete = function() {
 //   this = null;
@@ -35,8 +40,21 @@ Array.prototype.forEach.call( inputs, function( input )
 			fileName = e.target.value.split( '\\' ).pop();
 
 		if( fileName )
-			label.getElementById( 'span' ).innerHTML = fileName;
+			document.getElementById( 'file-name' ).innerHTML = fileName;
 		else
 			label.innerHTML = labelVal;
 	});
 });
+
+albumBtn.addEventListener('click', function()
+{
+  var newPhotoCard = new AlbumCard();
+  var newCardWrapper = document.createElement("ARTICLE");
+  newCardWrapper.className = "card-wrapper";
+  photoAlbum.appendChild(newCardWrapper);
+  var newTitle = document.createElement("H2");
+  var newTitleText = document.createTextNode("newPhotoCard.title");
+  document.newCardWrapper.appendChild(newTitle);
+
+
+})
