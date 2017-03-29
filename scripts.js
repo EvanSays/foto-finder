@@ -6,11 +6,16 @@ var albumBtn = document.getElementById('add-to-album-btn');
 // var favIconBtn = getElementsByClassName('card-icon-fav')
 //
 var photoAlbum = document.getElementById("photo-album");
+
 function AlbumCard(title, caption, img) {
   this.caption = inputCaption.value;
   console.log(this.caption)
   this.title = inputTitle.value;
   console.log(this.title)
+}
+
+AlbumCard.prototype.image = function() {
+  var newPhoto = "/photos/"+document.getElementById('file-name').innerHTML
 }
 
 
