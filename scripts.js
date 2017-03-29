@@ -50,11 +50,9 @@ albumBtn.addEventListener('click', function()
 {
   var newPhotoCard = new AlbumCard();
   var newCardWrapper = document.createElement("ARTICLE");
-  newCardWrapper.className = "card-wrapper";
+  var fileName = document.getElementById( 'file-name' ).innerHTML
+  newCardWrapper.setAttribute('id', fileName);
   photoAlbum.appendChild(newCardWrapper);
   var newTitle = document.createElement("H2");
-  var newTitleText = document.createTextNode("newPhotoCard.title");
-  document.newCardWrapper.appendChild(newTitle);
-
-
-})
+  fileName.appendChild(document.createTextNode(newPhotoCard.title));
+  })
