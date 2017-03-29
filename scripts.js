@@ -1,24 +1,42 @@
 var inputTitle = document.getElementById('input-title');
 var inputCaption = document.getElementById('input-caption');
-// var chooseFileBtn = getElementById('choose-file-btn');
 var albumBtn = document.getElementById('add-to-album-btn');
-// var cardDelBtn = getElementsByClassName('card-del-btn')
-// var favIconBtn = getElementsByClassName('card-icon-fav')
-//
+var cardDelBtn = document.getElementById('card-icon-delete')
 var photoAlbum = document.getElementById("photo-album");
 
-function AlbumCard(title, caption, img) {
+function AlbumCard(title, caption) {
   this.caption = inputCaption.value;
   console.log(this.caption)
   this.title = inputTitle.value;
   console.log(this.title)
 }
 
-AlbumCard.prototype.image = function() {
-  var newPhoto = "/photos/"+document.getElementById('file-name').innerHTML
-}
 
 
+photoAlbum.addEventListener('click', function(e) {
+  if (e.target.className === "card-icon-fav") {
+    var thisFooter = e.target.parentNode;
+    var newIcon = document.createElement("IMG");
+    newIcon.setAttribute("class", "card-icon-fav-active")
+    newIcon.setAttribute("src", "photos/favorite-active.svg")
+    thisFooter.appendChild(newIcon)
+    e.target.remove(this);
+}})
+
+photoAlbum.addEventListener('click', function(e) {
+  if (e.target.className === "card-icon-fav-active") {
+    var thisFooter = e.target.parentNode;
+    var newIcon = document.createElement("IMG");
+    newIcon.setAttribute("class", "card-icon-fav")
+    newIcon.setAttribute("src", "photos/favorite.svg")
+    thisFooter.appendChild(newIcon)
+    e.target.remove();
+}})
+
+photoAlbum.addEventListener('click', function(e) {
+  if (e.target.className === "card-icon-delete" || e.target.className === "card-icon-delete-active")
+  e.target.parentNode.parentNode.remove();
+})
 
 var inputs = document.querySelectorAll( '.inputfile' );
 Array.prototype.forEach.call( inputs, function( input )
@@ -41,6 +59,7 @@ Array.prototype.forEach.call( inputs, function( input )
 	});
 });
 
+
 albumBtn.addEventListener('click', function()
 {
   var newPhotoCard = new AlbumCard();
@@ -53,22 +72,22 @@ albumBtn.addEventListener('click', function()
   var newPhotoURL = "photos/"+fileName;
   var cardContent = document.createElement("P");
   var newCaptionText = document.createTextNode(newPhotoCard.caption);  var trashIconStd = document.createElement("IMG")
-  var trashIconActv = document.createElement("IMG")
+  var trashIconActv = document.createElement("IMG");
   var newCardFooter = document.createElement("FOOTER");
-  var favoriteIconStd = document.createElement("IMG")
-  var favoriteIconActv = document.createElement("IMG")
+  var favoriteIconStd = document.createElement("IMG");
+  var favoriteIconActv = document.createElement("IMG");
 
 
-  newCardWrapper.setAttribute('class', "card-wrapper")
+  newCardWrapper.setAttribute('class', "card-wrapper");
   newCardWrapper.setAttribute('id', fileName);
-  newTitle.setAttribute('class', "card-header")
+  newTitle.setAttribute('class', "card-header");
   newPhotoElement.setAttribute("src", newPhotoURL);
   newPhotoElement.setAttribute("class", "card-img");
   cardContent.setAttribute("class", "card-content");
-  trashIconStd.setAttribute("src", "photos/delete.svg")
-  trashIconStd.setAttribute("class", "card-icon-delete")
-  favoriteIconStd.setAttribute("src", "photos/favorite.svg")
-  favoriteIconStd.setAttribute("class", "card-icon-fav")
+  trashIconStd.setAttribute("src", "photos/delete.svg");
+  trashIconStd.setAttribute("class", "card-icon-delete");
+  favoriteIconStd.setAttribute("src", "photos/favorite.svg");
+  favoriteIconStd.setAttribute("class", "card-icon-fav");
 
   photoAlbum.appendChild(newCardWrapper);
   newCardWrapper.appendChild(newTitle);
@@ -77,8 +96,8 @@ albumBtn.addEventListener('click', function()
   newCardWrapper.appendChild(cardContent);
   cardContent.appendChild(newCaptionText);
   newCardWrapper.appendChild(newCardFooter);
-  newCardFooter.appendChild(favoriteIconStd)
-  newCardFooter.appendChild(trashIconStd)
+  newCardFooter.appendChild(favoriteIconStd);
+  newCardFooter.appendChild(trashIconStd);
   // trashIconActv.setAttribute("src", "photos/delete-active.svg")
   // trashIconActv.setAttribute("class", "card-icon-delete-active")
   // favoriteIconActv.setAttribute("class", "card-icon-fav-active")
