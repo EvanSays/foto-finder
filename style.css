@@ -1,211 +1,294 @@
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #3E2A35;
-}
-
-
-/*=======================================
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #3E2A35;
+  }
+  /*=======================================
 >>>>>>>>  Header  <<<<<<<<
 ========================================*/
 
-h1 {
-  background-color: #3E2A35;
-  color: #FFFFFF;
-  font-size: 53px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-align: center;
-  padding-top: 25px;
-}
+  h1 {
+    background-color: #3E2A35;
+    color: #FFFFFF;
+    font-size: 53px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 25px;
+  }
 
-.header-cam-icon {
-  height: 53px;
-  vertical-align: top;
-}
-
-
-/*=======================================
+  .header-cam-icon {
+    height: 53px;
+    vertical-align: top;
+  }
+  /*=======================================
 >>>>>>>>  Main  <<<<<<<<
 ========================================*/
 
-main {
-  background: #3E2A35;
-  height: 350px;
-}
+  main {
+    background: #3E2A35;
+    height: 350px;
+  }
 
-.inputs-wrapper {
-  max-width: 480px;
-  margin: auto;
-  background: #3E2A35;
-  padding: 10px;
-}
+  .inputs-wrapper {
+    max-width: 480px;
+    margin: auto;
+    background: #3E2A35;
+    padding: 10px;
+  }
 
-label {
-  font-weight: 200;
-  display: block;
-  color: #C2B2B4;
-  padding-top: 26px;
-}
+  label {
+    font-weight: 200;
+    display: block;
+    color: #C2B2B4;
+    padding-top: 26px;
+  }
 
-#input-caption, #input-title {
-  margin-top: 12px;
-  width: 100%;
-  height: 45px;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-/*=======================================
+  #input-caption, #input-title {
+    margin-top: 12px;
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  /*=======================================
 >>>>>>>>  buttons  <<<<<<<<
 ========================================*/
 
-.choose-add-btn-wrapper {
-  /*width: 480px;*/
-  text-align: center;
-  margin-top: 39px;
-}
+  .choose-add-btn-wrapper {
+    /*width: 480px;*/
+    text-align: center;
+    margin-top: 39px;
+  }
 
-#add-to-album-btn {
-  background-color: #5B4447;
-  color: #FFFFFF;
-  font-size: 14px;
-  text-align: center;
-  line-height: 42px;
-  width: 200px;
-  height: 42px;
-  border: 0px;
-  padding: 0px;
-  float: right;
-}
+  #add-to-album-btn {
+    background-color: #5B4447;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 42px;
+    width: 200px;
+    height: 42px;
+    border: 0px;
+    padding: 0px;
+    float: right;
+  }
 
-#choose-file-btn {
-  float: left;
-}
+  #choose-file-btn {
+    float: left;
+  }
 
-#add-to-album-btn:hover {
-  background-color: #C2B2B4;
-  cursor: pointer;
-}
-
-
-/*=======================================
+  #add-to-album-btn:hover {
+    background-color: #C2B2B4;
+    cursor: pointer;
+  }
+  /*=======================================
 >>>>>>>>  Choose Button  <<<<<<<<
 ========================================*/
 
-.inputfile+label {
-  cursor: pointer;
-  /* "hand" cursor */
-}
+  .inputfile+label {
+    cursor: pointer;
+    /* "hand" cursor */
+  }
 
-.inputfile {
-  width: 200px;
-  height: 50px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
+  .inputfile {
+    /*width: 200px;
+  height: 50px;*/
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
 
-.inputfile+label {
-  width: 210px;
-  height: 42px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #FFFFFF;
-  background-color: #5B4447;
-  display: inline-block;
-  line-height: 42px;
-  padding: 0px;
-  float: left;
-}
+  .inputfile+label {
+    width: 210px;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #5B4447;
+    display: inline-block;
+    line-height: 42px;
+    padding: 0px;
+    float: left;
+  }
 
-.inputfile:focus+label, .inputfile+label:hover {
-  background-color: #938284;
-}
-
-
-/*=======================================
+  .inputfile:focus+label, .inputfile+label:hover {
+    background-color: #938284;
+  }
+  /*=======================================
 >>>>>>>>  Cards  <<<<<<<<
 ========================================*/
 
-section {
-  text-align: center;
-  background-color: #C2B2B4;
-}
+  section {
+    text-align: center;
+    background-color: #C2B2B4;
+  }
 
-.card-wrapper {
-  background-color: #5b4447;
-  display: inline-block;
-  width: 197px;
-  margin: 17px;
-  border: 1px solid #938284;
-}
+  .card-wrapper {
+    background-color: #5b4447;
+    display: inline-block;
+    width: 197px;
+    margin: 17px;
+    border: 1px solid #938284;
+    vertical-align: top;
+    background-size: contain;
+  }
 
-.card-header, .card-content {
-  background-color: #FFFFFF;
-  color: #3E2A35;
-  padding: 10px 10px 12px 10px;
-  text-align: left;
-  margin-top: -2px;
-}
+  .card-header, .card-content {
+    background-color: #FFFFFF;
+    font-weight: 600;
+    color: #3E2A35;
+    padding: 10px 10px 12px 10px;
+    text-align: left;
+    width: 100%;
+  }
 
-.card-footer {
-  height: 40px;
-}
+  .card-header {
+    height: 40px;
+  }
 
-.card-img {
-  width: 100%;
-}
+  .card-content {
+    height: 70px;
+  }
 
-.card-icon-delete {
-  float: left;
-  width: 25px;
-  margin: 7px;
-}
+  .card-img {
+    width: 100%;
+    height: 121px;
+    background-size: cover;
+  }
 
-.card-icon-delete:hover {
-  opacity: 0.5;
-}
+  .card-icon-delete {
+    float: left;
+    width: 25px;
+    margin: 7px;
+  }
 
-.card-icon-delete-active {
-  float: left;
-  width: 25px;
-  margin: 7px;
-}
+  .card-icon-delete:hover {
+    opacity: 0.5;
+  }
 
-.card-icon-fav {
-  float: right;
-  width: 25px;
-  margin: 7px;
-}
+  .card-icon-delete-active {
+    float: left;
+    width: 25px;
+    margin: 7px;
+  }
 
-.card-icon-fav:hover {
-  opacity: 0.5;
-}
+  .card-icon-fav {
+    float: right;
+    width: 25px;
+    margin: 7px;
+  }
 
-.card-icon-fav-active {
-  float: right;
-  width: 25px;
-  margin: 7px;
-}
+  .card-icon-fav:hover {
+    opacity: 0.5;
+  }
 
-
-/*=======================================
+  .card-icon-fav-active {
+    float: right;
+    width: 25px;
+    margin: 7px;
+  }
+  /*=======================================
 >>>>>>>>  Footer  <<<<<<<<
 ========================================*/
 
-#footer-creaters {
-  height: 50px;
-}
+  #footer-creaters {
+    height: 50px;
+  }
 
-p {
-  font-size: 12px;
-  color: #938284;
-  float: right;
-  padding: 20px;
-}
+  #footer-made-by {
+    font-size: 12px;
+    color: #938284;
+    float: right;
+    padding: 20px;
+  }
+  /*=======================================
+>>>>>>>>  Responsive @ media  <<<<<<<<
+========================================*/
+
+  @media screen and (max-width: 467px) {
+    h1 {
+      font-size: 35px;
+      padding-top: 25px;
+    }
+    .header-cam-icon {
+      height: 35px;
+      vertical-align: top;
+    }
+    .inputs-wrapper {
+      max-width: 480px;
+      margin: auto;
+      padding: 10px 20px 10px 20px;
+    }
+    #add-to-album-btn, .inputfile+label {
+      width: 160px;
+    }
+    .card-wrapper {
+      width: 85%;
+      margin: 17px;
+      margin-top: 27px;
+    }
+    .card-header {
+      height: 68px;
+      padding-top: 19px;
+    }
+    .card-footer {
+      height: 78px;
+    }
+    .card-content {
+      height: auto;
+    }
+    .card-header, .card-content {
+      padding: 20px 20px 25px 20px;
+      font-size: 26px;
+    }
+    main {
+      height: 317px;
+    }
+    .card-img {
+      height: 230px;
+    }
+    .card-icon-delete, .card-icon-fav, .card-icon-delete-active, .card-icon-fav-active, {
+      width: 48px;
+      margin: 13px;
+    }
+  }
+
+  @media screen and (max-width: 467px) {
+    main {
+      height: 294px;
+    }
+    .header-cam-icon {
+      height: 25px;
+      vertical-align: top;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    label {
+      padding-top: 15px;
+    }
+    #add-to-album-btn, .inputfile+label {
+      width: 129px;
+    }
+    .label-title-caption {
+      font-size: 15px;
+    }
+    .card-img {
+      height: 210px;
+    }
+    .card-header, .card-content {
+      font-size: 20px;
+    }
+    .card-header {
+      height: 57px;
+    }
+    .card-icon-delete, .card-icon-fav, .card-icon-delete-active, .card-icon-fav-active, {
+      width: 40px;
+      margin: 13px;
+    }
+  }
