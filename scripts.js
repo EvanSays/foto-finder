@@ -72,7 +72,7 @@ function toggleFavoriteIcon(e) {
         var thisCard = e.target.parentNode.parentNode;
         var childElements = thisCard.children
         for (i = 0; i < childElements.length; i++) {
-            childElements[i].style.backgroundColor = "yellow"
+            childElements[i].style.backgroundColor = "#e4c4A7"
         }
         var newIcon = document.createElement("IMG");
         newIcon.setAttribute("class", "card-icon-fav-active");
