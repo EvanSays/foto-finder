@@ -34,26 +34,26 @@ main {
 }
 
 .inputs-wrapper {
+  background: #3E2A35;
   max-width: 480px;
   margin: auto;
-  background: #3E2A35;
   padding: 10px;
 }
 
 label {
+  color: #C2B2B4;
   font-weight: 200;
   display: block;
-  color: #C2B2B4;
   padding-top: 26px;
 }
 
 #input-caption,
 #input-title {
-  margin-top: 12px;
-  width: 100%;
-  height: 45px;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 45px;
+  margin-top: 12px;
 }
 /*=======================================
 >>>>>>>>  buttons  <<<<<<<<
@@ -67,11 +67,11 @@ label {
 #add-to-album-btn {
   background-color: #5B4447;
   color: #FFFFFF;
+  width: 200px;
+  height: 42px;
   font-size: 14px;
   text-align: center;
   line-height: 42px;
-  width: 200px;
-  height: 42px;
   border: 0px;
   padding: 0px;
   float: right;
@@ -102,12 +102,12 @@ label {
 }
 
 .inputfile+label {
+  background-color: #5B4447;
+  color: #FFFFFF;
   width: 210px;
   height: 42px;
   font-size: 14px;
   font-weight: 300;
-  color: #FFFFFF;
-  background-color: #5B4447;
   display: inline-block;
   line-height: 42px;
   padding: 0px;
@@ -123,44 +123,42 @@ label {
 >>>>>>>>  Cards  <<<<<<<<
 ========================================*/
 h2 {
-  font-size: 30px;
-
-  font-weight: 600;
   color: #938284;
+  font-size: 30px;
+  font-weight: 600;
   padding-top: 20px;
   padding-bottom: 10px;
 }
 
 h3 {
-  font-size: 24px;
   color: #938284;
+  font-size: 24px;
   padding: 25px 20px 10px 20px;
 }
 
 section {
-  text-align: center;
   background-color: #C2B2B4;
+  text-align: center;
   min-height: 275px;
 }
 
 .card-wrapper {
   background-color: #5b4447;
-  display: inline-block;
-  width: 197px;
-  margin: 17px;
   border: 1px solid #938284;
+  width: 197px;
+  display: inline-block;
+  margin: 17px;
   vertical-align: top;
-  background-size: contain;
 }
 
 .card-header,
 .card-content {
   background-color: #FFFFFF;
-  font-weight: 600;
   color: #3E2A35;
+  width: 100%;
+  font-weight: 600;
   padding: 10px 10px 12px 10px;
   text-align: left;
-  width: 100%;
 }
 
 .card-header {
@@ -179,9 +177,9 @@ section {
 }
 
 .card-icon-delete {
-  float: left;
   width: 25px;
   margin: 7px;
+  float: left;
 }
 
 .card-icon-delete:hover {
@@ -189,15 +187,15 @@ section {
 }
 
 .card-icon-delete-active {
-  float: left;
   width: 25px;
   margin: 7px;
+  float: left;
 }
 
 .card-icon-fav {
-  float: right;
   width: 25px;
   margin: 7px;
+  float: right;
 }
 
 .card-icon-fav:hover {
@@ -205,8 +203,8 @@ section {
 }
 
 .card-icon-fav-active {
-  float: right;
   width: 25px;
+  float: right;
   margin: 7px;
 }
 /*=======================================
@@ -218,10 +216,10 @@ section {
 }
 
 #footer-made-by {
-  font-size: 12px;
   color: #938284;
-  float: right;
+  font-size: 12px;
   padding: 20px;
+  float: right;
 }
 /*=======================================
 >>>>>>>>  Responsive @ media  <<<<<<<<
@@ -347,7 +345,3 @@ section {
     margin: 13px;
   }
 }
-
-/*=======================================
->>>>>>>>  Classlist Add  <<<<<<<<
-========================================*/
