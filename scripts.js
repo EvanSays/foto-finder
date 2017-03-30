@@ -1,32 +1,21 @@
+// GLOBAL VARIABLES
 var inputTitle = document.getElementById('input-title');
 var inputCaption = document.getElementById('input-caption');
 var albumBtn = document.getElementById('add-to-album-btn');
-var cardDelBtn = document.getElementById('card-icon-delete')
 var photoAlbum = document.getElementById("photo-album");
 var fileValue = document.getElementById("file-name")
-var workpls = document.getElementById("file")
 var welcomeText = document.getElementsByClassName("welcome-text")
 
-
+// EVENT LISTENER FUNCTIONS
 function AlbumCard(title, caption) {
     this.caption = inputCaption.value;
-    console.log(this.caption)
     this.title = inputTitle.value;
-    console.log(this.title)
 }
 
-function checkDisable() {
-    if (inputTitle.value !== "" && inputCaption.value !== "" &&
-        fileValue.innerHTML !== "Choose File") {
-        albumBtn.disabled = false;
-    }
-}
-
-function removeStartTags() {
-  for (i = welcomeText.length-1; i >= 0; i--) {
-    welcomeText[i].remove();
-  }
-}
+albumBtn.addEventListener('click', function() {
+    removeStartTags();
+    createSetAppendCardElements();
+})
 
 inputTitle.addEventListener('input', function() {
     checkDisable()
@@ -37,28 +26,13 @@ inputCaption.addEventListener('input', function() {
 })
 
 photoAlbum.addEventListener('click', function(e) {
-    if (e.target.className === "card-icon-fav") {
-        console.log('a thing happened');
-        var thisFooter = e.target.parentNode;
-        var newIcon = document.createElement("IMG");
-        newIcon.setAttribute("class", "card-icon-fav-active")
-        newIcon.setAttribute("src", "photos/favorite-active.svg")
-        thisFooter.appendChild(newIcon)
-        e.target.remove();
-    }
-    if (e.target.className === 'card-icon-fav-active') {
-        var otherFooter = e.target.parentNode;
-        var otherIcon = document.createElement("IMG");
-        otherIcon.setAttribute("class", "card-icon-fav")
-        otherIcon.setAttribute("src", "photos/favorite.svg")
-        otherFooter.appendChild(otherIcon)
-        e.target.remove();
-    }
+    toggleFavoriteIcon(e)
 })
 
 photoAlbum.addEventListener('click', function(e) {
-    if (e.target.className === "card-icon-delete" || e.target.className === "card-icon-delete-active")
+    if (e.target.className === "card-icon-delete" || e.target.className === "card-icon-delete-active") {
         e.target.parentNode.parentNode.remove();
+    }
 })
 
 var inputs = document.querySelectorAll('.inputfile');
@@ -82,8 +56,52 @@ Array.prototype.forEach.call(inputs, function(input) {
     });
 });
 
-albumBtn.addEventListener('click', function() {
-    removeStartTags();
+//DOM MANIPULATION FUNCTIONS
+function checkDisable() {
+    if (inputTitle.value !== "" && inputCaption.value !== "" && fileValue.innerHTML !== "Choose File") {
+        albumBtn.disabled = false;
+    }
+    if (inputTitle.value === "" && inputCaption.value === "" && fileValue.innerHTML === "Choose File") {
+        albumBtn.disabled = false;
+    }
+}
+
+function toggleFavoriteIcon(e) {
+    if (e.target.className === "card-icon-fav") {
+        var thisFooter = e.target.parentNode;
+        var thisCard = e.target.parentNode.parentNode;
+        var childElements = thisCard.children
+        for (i = 0; i < childElements.length; i++) {
+            childElements[i].style.backgroundColor = "yellow"
+        }
+        var newIcon = document.createElement("IMG");
+        newIcon.setAttribute("class", "card-icon-fav-active");
+        newIcon.setAttribute("src", "photos/favorite-active.svg");
+        thisFooter.appendChild(newIcon);
+        e.target.remove();
+    }
+    if (e.target.className === 'card-icon-fav-active') {
+        var otherFooter = e.target.parentNode;
+        var thisCard = e.target.parentNode.parentNode;
+        var otherChildElements = thisCard.children
+        for (i = 0; i < otherChildElements.length; i++) {
+            otherChildElements[i].style.backgroundColor = "#FFFFFF"
+        }
+        var otherIcon = document.createElement("IMG");
+        otherIcon.setAttribute("class", "card-icon-fav");
+        otherIcon.setAttribute("src", "photos/favorite.svg");
+        otherFooter.appendChild(otherIcon);
+        e.target.remove();
+    }
+}
+
+function removeStartTags() {
+    for (i = welcomeText.length - 1; i >= 0; i--) {
+        welcomeText[i].remove();
+    }
+}
+
+function createSetAppendCardElements() {
     var newPhotoCard = new AlbumCard();
     var newCardWrapper = document.createElement("ARTICLE");
     var fileName = document.getElementById('file-name').innerHTML;
@@ -99,7 +117,6 @@ albumBtn.addEventListener('click', function() {
     var newCardFooter = document.createElement("FOOTER");
     var favoriteIconStd = document.createElement("IMG");
     var favoriteIconActv = document.createElement("IMG");
-
 
     newCardWrapper.setAttribute('class', "card-wrapper");
     newCardWrapper.setAttribute('id', fileName);
@@ -121,4 +138,4 @@ albumBtn.addEventListener('click', function() {
     newCardWrapper.appendChild(newCardFooter);
     newCardFooter.appendChild(favoriteIconStd);
     newCardFooter.appendChild(trashIconStd);
-})
+}
