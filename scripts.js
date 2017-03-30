@@ -5,6 +5,8 @@ var cardDelBtn = document.getElementById('card-icon-delete')
 var photoAlbum = document.getElementById("photo-album");
 var fileValue = document.getElementById("file-name")
 var workpls = document.getElementById("file")
+var welcomeText = document.getElementsByClassName("welcome-text")
+
 
 function AlbumCard(title, caption) {
     this.caption = inputCaption.value;
@@ -18,6 +20,12 @@ function checkDisable() {
         fileValue.innerHTML !== "Choose File") {
         albumBtn.disabled = false;
     }
+}
+
+function removeStartTags() {
+  for (i = welcomeText.length-1; i >= 0; i--) {
+    welcomeText[i].remove();
+  }
 }
 
 inputTitle.addEventListener('input', function() {
@@ -36,7 +44,6 @@ photoAlbum.addEventListener('click', function(e) {
         newIcon.setAttribute("class", "card-icon-fav-active")
         newIcon.setAttribute("src", "photos/favorite-active.svg")
         thisFooter.appendChild(newIcon)
-        thisFooter.parentNode.style.backgroundColor = "yellow"
         e.target.remove();
     }
     if (e.target.className === 'card-icon-fav-active') {
@@ -45,7 +52,6 @@ photoAlbum.addEventListener('click', function(e) {
         otherIcon.setAttribute("class", "card-icon-fav")
         otherIcon.setAttribute("src", "photos/favorite.svg")
         otherFooter.appendChild(otherIcon)
-        thisFooter.parentNode.style.backgroundColor = "#5b4447"
         e.target.remove();
     }
 })
@@ -77,6 +83,7 @@ Array.prototype.forEach.call(inputs, function(input) {
 });
 
 albumBtn.addEventListener('click', function() {
+    removeStartTags();
     var newPhotoCard = new AlbumCard();
     var newCardWrapper = document.createElement("ARTICLE");
     var fileName = document.getElementById('file-name').innerHTML;
